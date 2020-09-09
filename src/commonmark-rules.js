@@ -14,7 +14,7 @@ rules.lineBreak = {
   filter: 'br',
 
   replacement: function (content, node, options) {
-    return options.br + '\n'
+    return '\n'
   }
 }
 

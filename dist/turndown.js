@@ -1,7 +1,5 @@
-var TurndownService = (function (jsdom) {
+var TurndownService = (function () {
   'use strict';
-
-  jsdom = jsdom && Object.prototype.hasOwnProperty.call(jsdom, 'default') ? jsdom['default'] : jsdom;
 
   function extend (destination) {
     for (var i = 1; i < arguments.length; i++) {
@@ -83,7 +81,7 @@ var TurndownService = (function (jsdom) {
     filter: 'br',
 
     replacement: function (content, node, options) {
-      return options.br + '\n'
+      return '\n'
     }
   };
 
@@ -955,4 +953,4 @@ var TurndownService = (function (jsdom) {
 
   return TurndownService;
 
-}(jsdom));
+}());
